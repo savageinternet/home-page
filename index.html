@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+body, html {
+  padding: 0;
+  margin: 0;
+  min-width: 1024px;
+  font-family: Helvetica, sans-serif;
+  color: #322e22;
+  background-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  color: #444;
+  border-bottom: 8px solid brown;
+}
+
+#nav {
+  text-align: right;
+  font-size: 20px;
+  padding: 8px;
+}
+
+#nav > a {
+  margin-right: 32px;
+}
+
+#nav > a.active {
+  color: #322e22;
+  text-decoration: none;
+}
+
+#logo {
+  padding: 8px;
+}
+
+#main {
+  width: 1024px;
+  padding: 8px;
+  margin: auto;
+  text-align: center;
+}
+
+#tags > .tag {
+  font-size: 18px;
+  margin-right: 24px;
+  margin-top: 12px;
+  width: 176px;
+}
+
+.tag {
+  padding: 8px;
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  border: 2px solid black;
+  opacity: 0.6;
+  transition: opacity 100ms;
+  cursor: pointer;
+}
+.tag:hover {
+  opacity: 1;
+}
+.tag.ed {
+  background-color: green;
+  border-color: darkgreen;
+}
+.tag.el {
+  background-color: blue;
+  border-color: darkblue;
+}
+.tag.fab {
+  background-color: orange;
+  border-color: darkorange;
+}
+.tag.g {
+  background-color: red;
+  border-color: darkred;
+}
+.tag.rw {
+  background-color: purple;
+  border-color: purple;
+}
+.tag.viz {
+  background-color: brown;
+  border-color: brown;
+}
+
+#projects {
+  margin-top: 24px;
+}
+
+.project {
+  padding: 7px;
+  border: 1px solid white;
+  border-radius: 16px 16px 0 0;
+  display: inline-block;
+}
+
+.project.selected {
+  border: 1px solid black;
+  border-bottom: 1px solid white;
+}
+
+.project-wrapper {
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+.project-image {
+  border-radius: 16px;
+}
+
+.project-title {
+  position: absolute;
+  bottom: 4px;
+  text-align: left;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 0;
+  opacity: 0;
+  font-size: 32px;
+  padding: 8px;
+  border-radius: 0 0 16px 16px;
+  transition: height 100ms, opacity 100ms;
+}
+
+.project-wrapper:hover > .project-title {
+  height: 64px;
+  opacity: 1;
+}
+
+.project-tags {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  opacity: 0;
+  transition: opacity 100ms;
+}
+
+.project-wrapper:hover > .project-tags {
+  opacity: 1;
+}
+
+.project-tags > .tag {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 20px;
+}
+
+.project-details {
+  text-align: left;
+  border: 1px solid #322e22;
+  position: relative;
+  top: -1px;
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.project-details:after {
+  content: '';
+  position: absolute;
+  width: 314px;
+  height: 1px;
+  background-color: white;
+  top: -1px;
+  left: 346px;
+}
+
+.project-details-wrapper {
+  border-radius: 10px;
+  padding: 8px;
+  background-color: white;
+}
+
+.project-details-wrapper > * {
+  margin: 0;
+}
+</style>
+</head>
+<body>
+<div id="root">
+  <div id="header">
+    <div id="logo">
+      <a href="/"><h1>Savage Internet</h1></a>
+    </div>
+    <div id="nav">
+      <a href="/" class="active">Projects</a>
+      <a href="/consulting">Consulting</a>
+      <a href="/team">Team</a>
+    </div>
+  </div>
+  <div id="body">
+    <div id="main">
+      <div id="tags">
+        <span class="tag ed">education</span>
+        <span class="tag el">electronics</span>
+        <span class="tag fab">fabrication</span>
+        <span class="tag g">games</span>
+        <span class="tag rw">real-world</span>
+        <span class="tag viz">visualization</span>
+      </div>
+      <div id="projects">
+        <div class="project">
+          <div class="project-wrapper">
+            <img class="project-image" src="/project-thumb.jpg" />
+            <div class="project-title">expedition!</div>
+            <div class="project-tags">
+              <div class="tag ed">ed</div>
+              <div class="tag g">g</div>
+              <div class="tag rw">rw</div>
+            </div>
+          </div>
+        </div>
+        <div class="project selected">
+          <div class="project-wrapper">
+            <img class="project-image" src="/project-thumb.jpg" />
+            <div class="project-title">expedition!</div>
+            <div class="project-tags">
+              <div class="tag ed">ed</div>
+              <div class="tag g">g</div>
+              <div class="tag rw">rw</div>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-wrapper">
+            <img class="project-image" src="/project-thumb.jpg" />
+            <div class="project-title">expedition!</div>
+            <div class="project-tags">
+              <div class="tag ed">ed</div>
+              <div class="tag g">g</div>
+              <div class="tag rw">rw</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-details">
+          <div class="project-details-wrapper">
+            <h3>expedition!</h3>
+            <p>clown children ftw</p>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-wrapper">
+            <img class="project-image" src="/project-thumb.jpg" />
+            <div class="project-title">expedition!</div>
+            <div class="project-tags">
+              <div class="tag ed">ed</div>
+              <div class="tag g">g</div>
+              <div class="tag rw">rw</div>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-wrapper">
+            <img class="project-image" src="/project-thumb.jpg" />
+            <div class="project-title">expedition!</div>
+            <div class="project-tags">
+              <div class="tag ed">ed</div>
+              <div class="tag g">g</div>
+              <div class="tag rw">rw</div>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-wrapper">
+            <img class="project-image" src="/project-thumb.jpg" />
+            <div class="project-title">expedition!</div>
+            <div class="project-tags">
+              <div class="tag ed">ed</div>
+              <div class="tag g">g</div>
+              <div class="tag rw">rw</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
