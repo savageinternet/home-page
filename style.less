@@ -34,6 +34,7 @@
 
 @color-bg: #fff;
 @color-fg: #322e22;
+@color-link: @color-r;
 
 // MAIN
 
@@ -77,6 +78,20 @@ body, html {
 #nav > a,
 #nav > span {
   margin-right: 32px;
+  text-decoration: none;
+}
+#nav > span {
+  color: @color-b;
+}
+#nav > a:link,
+#nav > a:visited {
+  color: lighten(@color-link, 5%);
+}
+#nav > a:hover {
+  color: @color-link;
+}
+#nav > a:active {
+  color: darken(@color-link, 5%);
 }
 
 #logo {
@@ -191,11 +206,11 @@ body, html {
 }
 
 .project-tags > .tag {
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   text-align: center;
-  line-height: 20px;
-  border-radius: 20px;
+  line-height: 30px;
+  border-radius: 25px;
 }
 
 .project-details {
