@@ -23,6 +23,8 @@
     var projectTagSelector = '.project-tags > .tag.' + tagName;
     $$(projectTagSelector).forEach(function($tag) {
       $tag.classList.remove('active');
+      var $wrapper = $tag.parentNode.parentNode;
+      $wrapper.classList.remove(tagName);
     });
   }
 
@@ -32,6 +34,8 @@
     var projectTagSelector = '.project-tags > .tag.' + tagName;
     $$(projectTagSelector).forEach(function($tag) {
       $tag.classList.add('active');
+      var $wrapper = $tag.parentNode.parentNode;
+      $wrapper.classList.add(tagName);
     });
   }
 
@@ -90,6 +94,7 @@
       } else {
         $projectsParent.insertBefore($details, $projects[j]);
       }
+      $details.classList.remove('hide');
       $details.classList.remove.apply($details.classList, offsetClasses);
       $details.classList.add(offsetClass);
       $projects.forEach(function($project) {

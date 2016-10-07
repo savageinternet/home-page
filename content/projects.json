@@ -5,24 +5,9 @@
     "tags": ["ed", "g", "rw"],
     "description": "TODO"
   }, {
-    "thumb": "woman-of-bronze-300.jpg",
-    "title": "Doc Savage, Woman of Bronze",
-    "tags": ["g", "rw"],
-    "description": "TODO"
-  }, {
-    "thumb": "intensive-mental-300.png",
-    "title": "Doc Savage's Intensive Mental Training",
-    "tags": ["ed", "g"],
-    "description": "TODO"
-  }, {
-    "thumb": "jugger-300.jpg",
-    "title": "Jugger California",
-    "tags": ["fab", "g", "rw"],
-    "description": "TODO"
-  }, {
-    "thumb": "dnd-300.jpg",
-    "title": "D&D GMing",
-    "tags": ["g"],
+    "thumb": "hoedown-300.jpg",
+    "title": "Kinoma Hoedown",
+    "tags": ["el", "fab", "g"],
     "description": "TODO"
   }, {
     "thumb": "datasense-300.png",
@@ -30,14 +15,29 @@
     "tags": ["ed", "viz"],
     "description": "TODO"
   }, {
-    "thumb": "hoedown-300.jpg",
-    "title": "Kinoma Hoedown",
-    "tags": ["el", "fab", "g"],
+    "thumb": "jugger-300.jpg",
+    "title": "Jugger California",
+    "tags": ["fab", "g", "rw"],
+    "description": "TODO"
+  }, {
+    "thumb": "woman-of-bronze-300.jpg",
+    "title": "Doc Savage, Woman of Bronze",
+    "tags": ["g", "rw"],
     "description": "TODO"
   }, {
     "thumb": "heve-300.jpg",
     "title": "Hello, Velo!",
     "tags": ["el", "fab"],
+    "description": "TODO"
+  }, {
+    "thumb": "dnd-300.jpg",
+    "title": "D&D GMing",
+    "tags": ["g"],
+    "description": "TODO"
+  }, {
+    "thumb": "intensive-mental-300.png",
+    "title": "Doc Savage's Intensive Mental Training",
+    "tags": ["ed", "g"],
     "description": "TODO"
   }, {
     "thumb": "cookie-cutters-300.jpg",
