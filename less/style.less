@@ -239,12 +239,13 @@ img {
   bottom: 7px;
   text-align: left;
   width: ~"calc(100% - 14px)";
-  background-color: fadeout(@color-bg, 40%);
+  background-color: fadeout(@color-bg, 30%);
   height: 50px;
   opacity: 0;
   padding: 8px;
   border-radius: 0 0 10px 10px;
   transition: height 100ms, opacity 100ms;
+  color: @color-r;
   .heading();
 }
 
@@ -320,4 +321,5 @@ img {
 
 #project_details_title {
   .heading();
+  color: @color-r;
 }

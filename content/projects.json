@@ -3,86 +3,139 @@
     "thumb": "expedition-300.png",
     "title": "expedition!",
     "tags": ["ed", "g", "rw"],
+    "links": [],
     "description": "expedition! is a game for connecting people around location-based educational quests. Currently in development."
   }, {
     "thumb": "hoedown-300.jpg",
     "title": "Kinoma Hoedown",
     "tags": ["el", "fab", "g"],
+    "links": [
+      {"title": "Kinoma Blog Post", "href": "http://blog.kinoma.com/2014/06/hoedown-with-the-savages-and-kinoma-create/"},
+      {"title": "Github Repository", "href": "https://github.com/savageinternet/hoedown"}
+    ],
     "description": "Kinoma announced their Kinoma Create platform (for Javascript-based embedded programming) at SXSW, and to show it off they asked developers from Canada, the US, and Japan to create demos to share at the conference. We developed Hoedown, an Austin-themed interactive character generation system that tests a person’s intelligence, charisma, wisdom strength, dexterity, and constitution using a series of entertaining challenges; the device finally takes their photo and assigns them a class, like Rodeo Clown, Oil Baron, or Rancher. The project received a warm reception on the show floor at SXSW 2014."
   }, {
     "thumb": "datasense-300.png",
     "title": "Data Sense",
     "tags": ["ed", "viz"],
+    "links": [
+      {"title": "Data Sense", "href": "https://makesenseofdata.com"}
+    ],
     "description": "Data Sense is a platform for people who quantify parts of their lives, for example by using Fitbit or other self-tracking devices, to make sense of the data they collect. The platform allows them to upload their data or connect to data services, then create visualizations that link information from multiple sources. This project is an active collaboration with Intel Labs."
   }, {
     "thumb": "jugger-300.jpg",
     "title": "Jugger California",
     "tags": ["fab", "g", "rw"],
+    "links": [
+      {"title": "Instructable for Jugger Weapons", "href": "http://instructables.com/id/Jugger-Weapons"},
+      {"title": "East Bay Nerd Nite Talk", "href": "https://youtu.be/LZ1WYXq14u0?t=2h52m40s"}
+    ],
     "description": "Jugger California is a San Francisco-area league we founded for the sport of jugger. Jugger---a blend of capture the flag, fencing, and rugby---enjoys relative popularity in Germany, but we introduced the game to the Bay Area. There are currently three teams in the league (San Francisco, Berkeley, and San Jose). We personally have showcased jugger at local games (Come Out & Play) and art (Figment) festivals, as well as given a presentation on its lineage dating back to Roman times. We constructed the first set of equipment ourselves from PVC and pipe insulation, and directed construction of further sets: our write-up on Instructables was featured."
   }, {
     "thumb": "woman-of-bronze-300.jpg",
     "title": "Doc Savage, Woman of Bronze",
     "tags": ["g", "rw"],
+    "links": [
+      {"title": "Puzzle Hunt Materials", "href": "https://drive.google.com/drive/folders/0B015tvjlD7Dmc0VqOGpyUmZhSkU?usp=sharing"}
+    ],
     "description": "Doc Savage, Woman of Bronze, is an Oakland-based puzzle hunt game Evan developed in honour of Valkyrie’s receiving her PhD. It features a collection of letter locks hidden around the city: the players must determine which sites in the city contain locks, go to those sites and find the locks, and finally determine the word which will unlock them. A meta-puzzle and story-based final choice conclude the puzzle. Evan supervised this game for 15 people; it requires roughly 8 hours to complete and ties into Oakland’s unique history and architecture."
   }, {
     "thumb": "heve-300.jpg",
     "title": "Hello, Velo!",
     "tags": ["el", "fab"],
+    "links": [
+      {"title": "Kinoma Blog Post", "href": "http://blog.kinoma.com/2016/08/hello-velo"},
+      {"title": "Instructable for Hello, Velo!", "href": "http://www.instructables.com/id/Hello-Velo-the-Internet-of-Two-Wheeled-Things/"},
+      {"title": "3D models for Case", "href": "https://www.thingiverse.com/thing:1695733"}
+    ],
     "description": "The Hello, Velo! is a device which attaches to a bicycle and allows its owner to communicate with it, for example to determine where she left it parked. This is enabled through a GSM (cellular network) antenna and a GPS antenna, both attached to a Kinoma Element. The electronics are enclosed in a custom 3D-printed case. The Hello, Velo! was created during Valkyrie’s summer 2016 Maker-in-Residency at Kinoma’s Headquarters, and her write-up on Instructables was featured."
   }, {
     "thumb": "dnd-300.jpg",
     "title": "D&D GMing",
     "tags": ["g"],
+    "links": [],
     "description": "As dungeon masters for a rotating group of players, we have created storylines, designed and balanced dungeons and monsters, crafted props, and enjoyed many hours of structured improv."
   }, {
     "thumb": "intensive-mental-300.png",
     "title": "Doc Savage's Intensive Mental Training",
     "tags": ["ed", "g"],
+    "links": [],
     "description": "Doc Savage’s Intensive Mental Training is a word game we developed in the crossword style, that focuses its challenge around syllables rather than pure letter counts. At least one foreign language (Spanish) professor has used it in her classroom as a fun challenge to encourage growth in second-language learners."
   }, {
     "thumb": "cookie-cutters-300.jpg",
     "title": "Cookie Cutters",
     "tags": ["fab"],
+    "links": [
+      {"title": "3D models and OpenSCAD Code", "href": "http://www.thingiverse.com/thing:1185477"}
+    ],
     "description": "As a Christmas gift to the players of Jugger California, we threw a themed holiday party complete with Jugger-shaped cookie cutters. We designed and 3D printed these cookie cutters; we sent cutters to Denver, Ireland, Germany, and Australia at the request of other players, and the design files are available online."
   }, {
     "thumb": "beer-glasses-300.jpg",
     "title": "Etched Pint Glasses",
     "tags": ["fab"],
+    "links": [],
     "description": "We attend roughly one large jugger tournament per year, and it has become our tradition to give a beer-themed gift to the other teams in attendance. For our first tournament, we brewed a special blood red beer (made with beets) named after the movie from whence Jugger originated (namely, “The Blood of Heroes”). At the second tournament we handed out laser-engraved pint glasses bearing the name and year of the tournament to other players."
   }, {
     "thumb": "d20-300.jpg",
     "title": "Anti-Crit GM d20",
     "tags": ["fab"],
+    "links": [
+      {"title": "Instructable for Anti-Crit d20", "href": "http://www.instructables.com/id/3D-Printed-D20-As-D10/"}
+    ],
     "description": "As a gift for a friend of ours with whom we played tabletop roleplaying games, we designed and fabricated a special Anti-Crit die: a 20-sided die on which only the numbers 1-10 appear."
   }, {
     "thumb": "lot-300.png",
     "title": "USGS Terrain Data in OpenSCAD",
     "tags": ["fab", "viz"],
+    "links": [],
     "description": "Valkyrie’s parents are working to design a home and landscape on their rural property: as a gift to them we created a 3D model of the lot using elevation data from the USGS and satellite imagery from Google Maps."
   }, {
     "thumb": "async-300.png",
     "title": "Talk: Async JS Patterns",
     "tags": ["ed"],
+    "links": [
+      {"title": "Interactive Talk Slides (HTML / JS)", "href": "http://candu.github.io/presentations/html/20140729-jquery-async-javascript/"}
+    ],
     "description": "Evan gave a talk at the East Bay JavaScript Meetup on patterns (and anti-patterns!) for handling asynchronous tasks in JavaScript."
   }, {
     "thumb": "cs160-300.jpg",
     "title": "CS160: Intro to User Interface Design",
     "tags": ["ed"],
+    "links": [
+      {"title": "Course Homepage", "href": "http://cs160.valkyriesavage.com"}
+    ],
     "description": "Valkyrie taught Intro User Interface Design, CS160, at UC Berkeley in summer 2015. This was the first time the course was offered in the summer; she redesigned it to fit into the accelerated timescale, as well as to use a new technology (smartwatches), and to remove half of the lectures in favor of a more studio-style class. For teaching this course, she won an Outstanding Graduate Student Instructor Award."
   }, {
     "thumb": "tutoring-300.jpg",
     "title": "Tutoring",
     "tags": ["ed", "fab"],
+    "links": [],
     "description": "For about two years we worked together with a 5th grader-turned-7th grader on a fabrication project of his choice: designing and 3D printing a rubber band gun from scratch. Along the way, we created a spirograph, learned about how temperature causes things to expand, and taught his printer to sing."
+  }, {
+    "thumb": "fabbed-300.png",
+    "title": "Fabbed to Sense",
+    "tags": ["el", "fab"],
+    "links": [
+      {"title": "Dissertation Talk", "href": "https://www.youtube.com/watch?v=SgZUxloEo4s"},
+      {"title": "Thesis (PDF)", "href": "http://valkyriesavage.com/papers/thesis.pdf"}
+    ],
+    "description": "Valkyrie’s thesis project at UC Berkeley was called “Fabbed to Sense: Integrated Design of Geometry and Sensing Algorithms for Interactive Objects”; it focused on tools to aid makers and professional designers in creating functional mockups of future interactive products, such as video game controllers, while avoiding the onerous assembly that typically accompanies that process. Her thesis document and presentation are available online."
   }, {
     "thumb": "datafist-300.png",
     "title": "datafist",
     "tags": ["ed", "viz"],
+    "links": [
+      {"title": "Github Repository", "href": "https://github.com/candu/datafist"}
+    ],
     "description": "Datafist is a visual programming tool and language for exploring datasets: users can upload their data and create regressions, sparklines, and more. This tool was designed and implemented entirely by Evan, prior to his work on the Data Sense project which derives from it."
   }, {
     "thumb": "toroid-300.png",
     "title": "Toroid: Tor Node Map",
     "tags": ["viz"],
-    "description": "Toroid is an interactive map of tor nodes across the globe."
+    "links": [
+      {"title": "Live Map", "href": "https://toroid.savageinter.net/"},
+      {"title": "Github Repository", "href": "https://github.com/candu/toroid"}
+    ],
+    "description": "Toroid is an interactive worldwide map of Tor nodes."
   }]
 }

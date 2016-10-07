@@ -86,9 +86,9 @@
     var offsetClass = getOffsetClass(i % 3);
     $project.addEventListener('click', function() {
       var title = $project.querySelector('.project-title').textContent;
-      var description = $project.querySelector('.project-description').textContent;
+      var description = $project.querySelector('.project-description').innerHTML;
       $title.textContent = title;
-      $description.textContent = description;
+      $description.innerHTML = description;
       if (j === total) {
         $projectsParent.appendChild($details);
       } else {
