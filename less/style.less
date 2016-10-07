@@ -326,26 +326,42 @@ img {
 
 // CONSULTING PAGE
 
-#consulting_clients {
+#left {
   width: 300px;
   display: inline-block;
   text-align: left;
 }
 
-#consulting_clients > .client {
+#left > .client {
   display: inline-block;
   padding: 10px;
 }
 
-#consulting_clients > .client > img {
+#left > .client > img {
   width: 120px;
   height: 120px;
 }
 
-#consulting_copy {
+#right {
   width: ~"calc(100% - 320px)";
   display: inline-block;
   vertical-align: top;
   padding: 0 16px;
   text-align: left;
+}
+
+#right > h2,
+.team-member > h2 {
+  color: @color-r;
+  .heading();
+}
+
+.team-member {
+  text-align: left;
+}
+
+.team-member > img {
+  float: left;
+  margin-right: 32px;
+  border-radius: 16px;
 }
