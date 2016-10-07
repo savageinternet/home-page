@@ -101,7 +101,6 @@
         $project.classList.remove('selected');
       });
       $project.classList.add('selected');
-      $project.scrollIntoView();
     }, false);
   });
 })();
