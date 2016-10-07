@@ -54,6 +54,16 @@ body, html {
   box-sizing: border-box;
 }
 
+img {
+  // see: https://stackoverflow.com/questions/12906789/preventing-an-image-from-being-draggable-or-selectable-without-using-js
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 #root {
   display: flex;
   flex-direction: column;
@@ -126,9 +136,17 @@ body, html {
   display: inline-block;
   border: 2px solid black;
   cursor: pointer;
+
+  // see: https://stackoverflow.com/questions/6900124/how-to-make-certain-text-not-selectable-with-css
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .tag-colors(@color) {
+  color: lighten(@color, 35%);
   background-color: @color;
   border-color: darken(@color, 10%);
 }
@@ -139,7 +157,8 @@ body, html {
 .tag.rw { .tag-colors(@color-b); }
 .tag.viz { .tag-colors(@color-v); }
 
-@percent-hover: 8%;
+@percent-active: 20%;
+@percent-hover: 5%;
 
 .tag.ed:hover { .tag-colors(darken(@color-r, @percent-hover)); }
 .tag.el:hover { .tag-colors(darken(@color-o, @percent-hover)); }
@@ -147,6 +166,20 @@ body, html {
 .tag.g:hover { .tag-colors(darken(@color-g, @percent-hover)); }
 .tag.rw:hover { .tag-colors(darken(@color-b, @percent-hover)); }
 .tag.viz:hover { .tag-colors(darken(@color-v, @percent-hover)); }
+
+.tag.ed.active { .tag-colors(darken(@color-r, @percent-active)); }
+.tag.el.active { .tag-colors(darken(@color-o, @percent-active)); }
+.tag.fab.active { .tag-colors(darken(@color-y, @percent-active)); }
+.tag.g.active { .tag-colors(darken(@color-g, @percent-active)); }
+.tag.rw.active { .tag-colors(darken(@color-b, @percent-active)); }
+.tag.viz.active { .tag-colors(darken(@color-v, @percent-active)); }
+
+.tag.ed.active:hover { .tag-colors(darken(@color-r, @percent-active + @percent-hover)); }
+.tag.el.active:hover { .tag-colors(darken(@color-o, @percent-active + @percent-hover)); }
+.tag.fab.active:hover { .tag-colors(darken(@color-y, @percent-active + @percent-hover)); }
+.tag.g.active:hover { .tag-colors(darken(@color-g, @percent-active + @percent-hover)); }
+.tag.rw.active:hover { .tag-colors(darken(@color-b, @percent-active + @percent-hover)); }
+.tag.viz.active:hover { .tag-colors(darken(@color-v, @percent-active + @percent-hover)); }
 
 #projects {
   margin-top: 24px;
@@ -172,6 +205,8 @@ body, html {
 
 .project-image {
   border-radius: 16px;
+  width: 300px;
+  height: 300px;
 }
 
 .project-title {
@@ -197,12 +232,6 @@ body, html {
   position: absolute;
   top: 8px;
   right: 8px;
-  opacity: 0;
-  transition: opacity 100ms;
-}
-
-.project-wrapper:hover > .project-tags {
-  opacity: 1;
 }
 
 .project-tags > .tag {
@@ -211,13 +240,20 @@ body, html {
   text-align: center;
   line-height: 30px;
   border-radius: 25px;
+  opacity: 0;
+  transition: opacity 100ms;
+}
+
+.project-wrapper:hover > .project-tags > .tag,
+.project-tags > .tag.active {
+  opacity: 1;
 }
 
 .project-description {
   display: none;
 }
 
-.project-details {
+#project_details {
   text-align: left;
   border: 1px solid @color-fg;
   position: relative;
@@ -226,7 +262,7 @@ body, html {
   border-radius: 16px;
 }
 
-.project-details:after {
+#project_details:after {
   content: '';
   position: absolute;
   width: 314px;
@@ -236,13 +272,12 @@ body, html {
   left: 346px;
 }
 
-.project-details-wrapper {
+#project_details_wrapper {
   border-radius: 10px;
   padding: 8px;
   background-color: @color-bg;
 }
 
-.project-details-wrapper > h3 {
-  margin: 0;
+#project_details_title {
   .heading();
 }

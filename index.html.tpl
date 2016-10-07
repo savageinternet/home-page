@@ -29,8 +29,15 @@
       <div id="projects">
         {PROJECTS}
       </div>
+      <div id="project_details">
+        <div id="project_details_wrapper">
+          <div id="project_details_title"></div>
+          <div id="project_details_description"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+<script src="/js/index.js"></script>
 </body>
 </html>
