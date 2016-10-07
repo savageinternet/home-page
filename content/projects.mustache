@@ -1,0 +1,16 @@
+{{#projects}}
+  <div class="project">
+    <div class="project-wrapper">
+      <img class="project-image" src="{{thumb}}" />
+      <div class="project-title">{{title}}</div>
+      <div class="project-tags">
+        {{#tags}}
+        <div class="tag {{.}}">{{.}}</div>
+        {{/tags}}
+      </div>
+      <div class="project-description">
+        {{description}}
+      </div>
+    </div>
+  </div>
+{{/projects}}
