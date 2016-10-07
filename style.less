@@ -1,4 +1,5 @@
-/* latin */
+// FONTS
+
 @font-face {
   font-family: 'Muli';
   font-style: normal;
@@ -7,7 +8,6 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
-/* latin */
 @font-face {
   font-family: 'Roboto';
   font-style: italic;
@@ -16,16 +16,36 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
+.heading() {
+  font-family: Roboto, sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+// COLORS
+
+@color-r: #cd0f22;
+@color-o: #c63;
+@color-y: #fecd33;
+@color-g: #393;
+@color-b: #369;
+@color-v: #639;
+
+@color-bg: #fff;
+@color-fg: #322e22;
+
+// MAIN
+
 body, html {
   padding: 0;
   margin: 0;
   min-width: 1024px;
   font-family: Muli, sans-serif;
-  color: #322e22;
-  background-color: #fff;
+  color: @color-fg;
+  background-color: @color-bg;
 }
 
-* {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
@@ -40,17 +60,14 @@ body, html {
   justify-content: space-between;
   align-items: center;
   height: 72px;
-  color: #444;
-  border-bottom: 8px solid brown;
+  border-bottom: 3px solid @color-g;
 }
 
 #nav {
   text-align: right;
   font-size: 20px;
   padding: 8px;
-  font-family: Roboto, sans-serif;
-  font-weight: 900;
-  font-style: italic;
+  .heading();
 }
 
 #nav > a {
@@ -90,37 +107,28 @@ body, html {
   color: white;
   display: inline-block;
   border: 2px solid black;
-  opacity: 0.6;
-  transition: opacity 100ms;
   cursor: pointer;
 }
-.tag:hover {
-  opacity: 1;
+
+.tag-colors(@color) {
+  background-color: @color;
+  border-color: darken(@color, 10%);
 }
-.tag.ed {
-  background-color: green;
-  border-color: darkgreen;
-}
-.tag.el {
-  background-color: blue;
-  border-color: darkblue;
-}
-.tag.fab {
-  background-color: orange;
-  border-color: darkorange;
-}
-.tag.g {
-  background-color: red;
-  border-color: darkred;
-}
-.tag.rw {
-  background-color: purple;
-  border-color: purple;
-}
-.tag.viz {
-  background-color: brown;
-  border-color: brown;
-}
+.tag.ed { .tag-colors(@color-r); }
+.tag.el { .tag-colors(@color-o); }
+.tag.fab { .tag-colors(@color-y); }
+.tag.g { .tag-colors(@color-g); }
+.tag.rw { .tag-colors(@color-b); }
+.tag.viz { .tag-colors(@color-v); }
+
+@percent-hover: 8%;
+
+.tag.ed:hover { .tag-colors(darken(@color-r, @percent-hover)); }
+.tag.el:hover { .tag-colors(darken(@color-o, @percent-hover)); }
+.tag.fab:hover { .tag-colors(darken(@color-y, @percent-hover)); }
+.tag.g:hover { .tag-colors(darken(@color-g, @percent-hover)); }
+.tag.rw:hover { .tag-colors(darken(@color-b, @percent-hover)); }
+.tag.viz:hover { .tag-colors(darken(@color-v, @percent-hover)); }
 
 #projects {
   margin-top: 24px;
@@ -128,14 +136,14 @@ body, html {
 
 .project {
   padding: 7px;
-  border: 1px solid white;
+  border: 1px solid @color-bg;
   border-radius: 16px 16px 0 0;
   display: inline-block;
 }
 
 .project.selected {
-  border: 1px solid black;
-  border-bottom: 1px solid white;
+  border: 1px solid @color-fg;
+  border-bottom: 1px solid @color-bg;
 }
 
 .project-wrapper {
@@ -153,16 +161,14 @@ body, html {
   bottom: 4px;
   text-align: left;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: fadeout(@color-bg, 40%);
   height: 0;
   opacity: 0;
   font-size: 32px;
   padding: 8px;
   border-radius: 0 0 16px 16px;
   transition: height 100ms, opacity 100ms;
-  font-family: Roboto, sans-serif;
-  font-weight: 900;
-  font-style: italic;
+  .heading();
 }
 
 .project-wrapper:hover > .project-title {
@@ -192,7 +198,7 @@ body, html {
 
 .project-details {
   text-align: left;
-  border: 1px solid #322e22;
+  border: 1px solid @color-fg;
   position: relative;
   top: -1px;
   padding: 8px;
@@ -204,7 +210,7 @@ body, html {
   position: absolute;
   width: 314px;
   height: 1px;
-  background-color: white;
+  background-color: @color-bg;
   top: -1px;
   left: 346px;
 }
@@ -212,12 +218,10 @@ body, html {
 .project-details-wrapper {
   border-radius: 10px;
   padding: 8px;
-  background-color: white;
+  background-color: @color-bg;
 }
 
 .project-details-wrapper > h3 {
   margin: 0;
-  font-family: Roboto, sans-serif;
-  font-weight: 900;
-  font-style: italic;
+  .heading();
 }

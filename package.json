@@ -1,0 +1,9 @@
+{
+  "name": "home-page",
+  "description": "Home page for Savage Internet LLC, at savageinter.net",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "less": "^2.7.1"
+  }
+}
