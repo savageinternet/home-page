@@ -1,8 +1,88 @@
 {
   "projects": [{
-    "thumb": "project-thumb.jpg",
+    "thumb": "expedition-300.png",
     "title": "expedition!",
     "tags": ["ed", "g", "rw"],
-    "description": "a thing with stuff"
+    "description": "TODO"
+  }, {
+    "thumb": "woman-of-bronze-300.jpg",
+    "title": "Doc Savage, Woman of Bronze",
+    "tags": ["g", "rw"],
+    "description": "TODO"
+  }, {
+    "thumb": "intensive-mental-300.png",
+    "title": "Doc Savage's Intensive Mental Training",
+    "tags": ["ed", "g"],
+    "description": "TODO"
+  }, {
+    "thumb": "jugger-300.jpg",
+    "title": "Jugger California",
+    "tags": ["fab", "g", "rw"],
+    "description": "TODO"
+  }, {
+    "thumb": "dnd-300.jpg",
+    "title": "D&D GMing",
+    "tags": ["g"],
+    "description": "TODO"
+  }, {
+    "thumb": "datasense-300.png",
+    "title": "Data Sense",
+    "tags": ["ed", "viz"],
+    "description": "TODO"
+  }, {
+    "thumb": "hoedown-300.jpg",
+    "title": "Kinoma Hoedown",
+    "tags": ["el", "fab", "g"],
+    "description": "TODO"
+  }, {
+    "thumb": "heve-300.jpg",
+    "title": "Hello, Velo!",
+    "tags": ["el", "fab"],
+    "description": "TODO"
+  }, {
+    "thumb": "cookie-cutters-300.jpg",
+    "title": "Cookie Cutters",
+    "tags": ["fab"],
+    "description": "TODO"
+  }, {
+    "thumb": "beer-glasses-300.jpg",
+    "title": "Etched Pint Glasses",
+    "tags": ["fab"],
+    "description": "TODO"
+  }, {
+    "thumb": "d20-300.jpg",
+    "title": "Anti-Crit GM d20",
+    "tags": ["fab"],
+    "description": "TODO"
+  }, {
+    "thumb": "lot-300.png",
+    "title": "USGS Terrain Data in OpenSCAD",
+    "tags": ["fab", "viz"],
+    "description": "TODO"
+  }, {
+    "thumb": "async-300.png",
+    "title": "Talk: Async JS Patterns",
+    "tags": ["ed"],
+    "description": "TODO"
+  }, {
+    "thumb": "cs160-300.jpg",
+    "title": "CS160: Intro to User Interface Design",
+    "tags": ["ed"],
+    "description": "TODO"
+  }, {
+    "thumb": "tutoring-300.jpg",
+    "title": "Tutoring",
+    "tags": ["ed", "fab"],
+    "description": "TODO"
+  }, {
+    "thumb": "datafist-300.png",
+    "title": "datafist",
+    "tags": ["ed", "viz"],
+    "description": "TODO"
+  }, {
+    "thumb": "toroid-300.png",
+    "title": "Toroid: Tor Node Map",
+    "tags": ["viz"],
+    "description": "TODO"
   }]
 }
