@@ -186,7 +186,6 @@ img {
 }
 
 .project {
-  padding: 8px;
   border: 2px solid @color-bg;
   border-radius: 16px 16px 0 0;
   display: inline-block;
@@ -198,9 +197,14 @@ img {
 }
 
 .project-wrapper {
+  padding: 8px;
   border-radius: 16px;
   position: relative;
   cursor: pointer;
+}
+
+.project.selected > .project-wrapper {
+  border-radius: 16px 16px 0 0;
 }
 
 .project-image {
@@ -211,9 +215,9 @@ img {
 
 .project-title {
   position: absolute;
-  bottom: 4px;
+  bottom: 14px;
   text-align: left;
-  width: 100%;
+  width: ~"calc(100% - 16px)";
   background-color: fadeout(@color-bg, 40%);
   height: 50px;
   opacity: 0;
