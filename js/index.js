@@ -70,8 +70,16 @@
     var j = (Math.floor(i / 3) + 1) * 3;
     return Math.min(j, total);
   }
+  function getOffsetClass(offset) {
+    return 'c' + offset + perRow;
+  }
+  var offsetClasses = [];
+  for (var offset = 0; offset < perRow; offset++) {
+    offsetClasses.push(getOffsetClass(offset));
+  }
   $projects.forEach(function($project, i) {
     var j = getInsertBeforeIndex(i);
+    var offsetClass = getOffsetClass(i % 3);
     $project.addEventListener('click', function() {
       var title = $project.querySelector('.project-title').textContent;
       var description = $project.querySelector('.project-description').textContent;
@@ -82,6 +90,12 @@
       } else {
         $projectsParent.insertBefore($details, $projects[j]);
       }
+      $details.classList.remove.apply($details.classList, offsetClasses);
+      $details.classList.add(offsetClass);
+      $projects.forEach(function($project) {
+        $project.classList.remove('selected');
+      });
+      $project.classList.add('selected');
     }, false);
   });
 })();

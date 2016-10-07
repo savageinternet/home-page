@@ -186,15 +186,15 @@ img {
 }
 
 .project {
-  padding: 7px;
-  border: 1px solid @color-bg;
+  padding: 8px;
+  border: 2px solid @color-bg;
   border-radius: 16px 16px 0 0;
   display: inline-block;
 }
 
 .project.selected {
-  border: 1px solid @color-fg;
-  border-bottom: 1px solid @color-bg;
+  border: 2px solid @color-fg;
+  border-bottom: 2px solid @color-bg;
 }
 
 .project-wrapper {
@@ -255,7 +255,7 @@ img {
 
 #project_details {
   text-align: left;
-  border: 1px solid @color-fg;
+  border: 2px solid @color-fg;
   position: relative;
   top: -1px;
   padding: 8px;
@@ -265,11 +265,20 @@ img {
 #project_details:after {
   content: '';
   position: absolute;
-  width: 314px;
-  height: 1px;
+  height: 2px;
   background-color: @color-bg;
-  top: -1px;
-  left: 346px;
+  top: -2px;
+  width: 316px;
+}
+
+#project_details.c03:after {
+  left: 18px;
+}
+#project_details.c13:after {
+  left: 344px;
+}
+#project_details.c23:after {
+  left: 669px;
 }
 
 #project_details_wrapper {
