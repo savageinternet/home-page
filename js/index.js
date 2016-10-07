@@ -4,10 +4,14 @@
       $id = document.getElementById.bind(document),
       activeTagName = null,
       $tags = $$('#tags > .tag'),
-      $title = $id('project_details_title'),
-      $description = $id('project_details_description'),
+      $projectsParent = $id('projects'),
       $projects = $$('#projects > .project'),
-      $projectTags = $$('.project-tags > .tag');
+      $projectTags = $$('.project-tags > .tag'),
+      $details = $id('project_details'),
+      $title = $id('project_details_title'),
+      $description = $id('project_details_description');
+
+  // TAG SELECTION
 
   function getTagName($tag) {
     return $tag.classList[1];
@@ -58,12 +62,26 @@
   $tags.forEach(attachTagListener);
   $projectTags.forEach(attachTagListener);
 
-  $projects.forEach(function($project) {
+  // DETAILS BOX
+
+  var perRow = 3,
+      total = $projects.length;
+  function getInsertBeforeIndex(i) {
+    var j = (Math.floor(i / 3) + 1) * 3;
+    return Math.min(j, total);
+  }
+  $projects.forEach(function($project, i) {
+    var j = getInsertBeforeIndex(i);
     $project.addEventListener('click', function() {
       var title = $project.querySelector('.project-title').textContent;
       var description = $project.querySelector('.project-description').textContent;
       $title.textContent = title;
       $description.textContent = description;
+      if (j === total) {
+        $projectsParent.appendChild($details);
+      } else {
+        $projectsParent.insertBefore($details, $projects[j]);
+      }
     }, false);
   });
 })();
