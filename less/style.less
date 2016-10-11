@@ -34,7 +34,7 @@
 
 @color-bg: #fff;
 @color-fg: #322e22;
-@color-link: @color-r;
+@color-link: @color-b;
 @color-selected-border: lighten(@color-fg, 20%);
 
 // MAIN
@@ -63,6 +63,16 @@ img {
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+}
+
+a:link, a:visited {
+  color: lighten(@color-link, 5%);
+}
+a:hover {
+  color: @color-link;
+}
+a:active {
+  color: darken(@color-link, 5%);
 }
 
 .hide {
@@ -98,21 +108,11 @@ img {
   text-decoration: none;
 }
 #nav > span {
-  color: @color-b;
-}
-#nav > a:link,
-#nav > a:visited {
-  color: lighten(@color-link, 5%);
-}
-#nav > a:hover {
-  color: @color-link;
-}
-#nav > a:active {
-  color: darken(@color-link, 5%);
+  color: @color-r;
 }
 
 #logo {
-  padding: 8px;
+  padding: 8px 8px 8px 31px;
 }
 
 #logo > a > img {
