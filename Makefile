@@ -1,7 +1,7 @@
 all: copy
 
 copy: build/css/style.css build/content/projects.html build/index.html
-	cp -r consulting.html fonts img js robots.txt team.html build
+	cp -r consulting.html favicon.ico fonts img js robots.txt team.html build
 
 build/css/style.css: less/style.less
 	mkdir -p build/css
