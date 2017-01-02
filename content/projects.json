@@ -23,6 +23,18 @@
     ],
     "description": "Data Sense is a platform for people who quantify parts of their lives, for example by using Fitbit or other self-tracking devices, to make sense of the data they collect. The platform allows them to upload their data or connect to data services, then create visualizations that link information from multiple sources. This project is an active collaboration with Intel Labs."
   }, {
+    "thumb": "locatrix-300.jpg",
+    "title": "Locatrix",
+    "tags": ["rw", "viz"],
+    "links": [],
+    "description": "Locatrix is an Android app that tracks your movements on a macro scale: if you’re on a long trip, you can keep friends and family back home update with what city you’re in. If you’re a digital nomad, your boss will always know your timezone. Locatrix only stores your city-level location, and only updates once per day, so your safety is never compromised. It also features best-effort updating: it works over Wi-Fi, cellular data networks, and even SMS to give peace of mind to your contacts no matter where you roam. Currently under development, expected release Q1 2017."
+  }, {
+    "thumb": "toronto-at-confederation-300.jpg",
+    "title": "Toronto At Confederation",
+    "tags": ["rw", "g", "ed"],
+    "links": [],
+    "description": "Toronto at Confederation, in development for Canada’s 150th, features puzzles set in Toronto of 1867. It leverages historical handbills, maps, and sites, and casts players in the roles of actual people from that time. We are currently developing puzzles and materials, and will release the game in July 2017 for Canada Day."
+  }, {
     "thumb": "jugger-300.jpg",
     "title": "Jugger California",
     "tags": ["fab", "g", "rw"],
