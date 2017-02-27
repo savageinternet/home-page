@@ -26,8 +26,11 @@
     "thumb": "locatrix-300.jpg",
     "title": "Locatrix",
     "tags": ["rw", "viz"],
-    "links": [],
-    "description": "Locatrix is an Android app that tracks your movements on a macro scale: if you’re on a long trip, you can keep friends and family back home update with what city you’re in. If you’re a digital nomad, your boss will always know your timezone. Locatrix only stores your city-level location, and only updates once per day, so your safety is never compromised. It also features best-effort updating: it works over Wi-Fi, cellular data networks, and even SMS to give peace of mind to your contacts no matter where you roam. Currently under development, expected release Q1 2017."
+    "links": [
+      {"title": "Locatrix Home Page", "href": "https://locatrix.savageinter.net"},
+      {"title": "Download on Google Play", "href": "https://play.google.com/store/apps/details?id=net.savageinter.locatrix"},
+    ],
+    "description": "Locatrix is an Android app that tracks your movements on a macro scale: if you’re on a long trip, you can keep friends and family back home update with what city you’re in. If you’re a digital nomad, your boss will always know your timezone. Locatrix only stores your city-level location, and only updates once per day, so your safety is never compromised. It also features best-effort updating: it works over Wi-Fi, cellular data networks, and soon even SMS to give peace of mind to your contacts no matter where you roam."
   }, {
     "thumb": "toronto-at-confederation-300.jpg",
     "title": "Toronto At Confederation",
@@ -71,7 +74,9 @@
     "thumb": "intensive-mental-300.png",
     "title": "Doc Savage's Intensive Mental Training",
     "tags": ["ed", "g"],
-    "links": [],
+    "links": [{
+      "title" : "Printable Game Board","href" : "https://drive.google.com/file/d/0BzrCBpMEE7AVTlpheFE2VDR0NWM/view?usp=sharing"
+    }],
     "description": "Doc Savage’s Intensive Mental Training is a word game we developed in the crossword style, that focuses its challenge around syllables rather than pure letter counts. At least one foreign language (Spanish) professor has used it in her classroom as a fun challenge to encourage growth in second-language learners."
   }, {
     "thumb": "cookie-cutters-300.jpg",
