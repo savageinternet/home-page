@@ -38,6 +38,14 @@
     "links": [],
     "description": "Toronto at Confederation is a puzzle hunt across Downtown Toronto. Designed for the Canada 150 celebration, it features puzzles set in Toronto of 1867. It leverages historical handbills, maps, and sites, and casts players in the roles of actual people from that time. We are currently developing puzzles and materials, and will release the game in July for Canada Day."
   }, {
+    "thumb": "pussyhat-300.jpg",
+    "title": "#resist shop",
+    "tags": ["fab"],
+    "links": [
+      {"title": "#resist shop on Shapeways", "href": "https://www.shapeways.com/shops/valkyrie"}
+    ],
+    "description": "To raise money for nonprofit advocacy organizations in the wake of the 2016 American election, Valkyrie created 3D models of necklace pendants and cufflinks showcasing pussyhats and other objects."
+  }, {
     "thumb": "jugger-300.jpg",
     "title": "Jugger California",
     "tags": ["fab", "g", "rw"],
