@@ -28,7 +28,7 @@
     "tags": ["rw", "viz"],
     "links": [
       {"title": "Locatrix Home Page", "href": "https://locatrix.savageinter.net"},
-      {"title": "Download on Google Play", "href": "https://play.google.com/store/apps/details?id=net.savageinter.locatrix"},
+      {"title": "Download on Google Play", "href": "https://play.google.com/store/apps/details?id=net.savageinter.locatrix"}
     ],
     "description": "Locatrix tracks your movements on a macro scale, with your privacy in mind. On a long trip, it keeps friends and family updated with what city you’re in, but not where you spent your Saturday night. For remote work, your boss will always know your timezone, but not that you sometimes take meetings from the beach."
   }, {
@@ -82,9 +82,9 @@
     "thumb": "intensive-mental-300.png",
     "title": "Doc Savage's Intensive Mental Training",
     "tags": ["ed", "g"],
-    "links": [{
-      "title" : "Printable Game Board","href" : "https://drive.google.com/file/d/0BzrCBpMEE7AVTlpheFE2VDR0NWM/view?usp=sharing"
-    }],
+    "links": [
+      {"title": "Printable Game Board", "href": "https://drive.google.com/file/d/0BzrCBpMEE7AVTlpheFE2VDR0NWM/view?usp=sharing"}
+    ],
     "description": "Doc Savage’s Intensive Mental Training is a word game in the crossword style, that focuses its challenge around syllables rather than pure letter counts. At least one foreign language (Spanish) professor has used it in her classroom as a fun challenge to encourage growth in second-language learners."
   }, {
     "thumb": "cookie-cutters-300.jpg",
