@@ -38,6 +38,7 @@
           <div id="project_details_description"></div>
         </div>
       </div>
+      <div class="email-contact">Want to talk? Reach out to us at <a href="mailto:founders@savageinter.net">founders@savageinter.net</a>!</div>
     </div>
   </div>
 </div>
