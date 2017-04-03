@@ -154,6 +154,12 @@
     ],
     "description": "Datafist is a visual programming tool and language for exploring datasets: users can upload their data and create regressions, sparklines, and more. This tool was designed and implemented entirely by Evan, prior to his work on the Data Sense project which derives from it."
   }, {
+    "thumb": "bats-300.png",
+    "title": "Scientific Visualization",
+    "tags": ["viz"],
+    "links": [],
+    "description": "Working with researchers from Eastern Michigan University and University of Michigan at Ann Arbor, we helped process data and craft visualizations of bat migrations tracked with sonic detectors. Silver-haired bat photo credit: Heather Adams, by permission."
+  }, {
     "thumb": "toroid-300.png",
     "title": "Toroid: Tor Node Map",
     "tags": ["viz"],
