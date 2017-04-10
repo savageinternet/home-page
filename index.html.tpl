@@ -38,7 +38,11 @@
           <div id="project_details_description"></div>
         </div>
       </div>
-      <div class="email-contact">Want to talk? Reach out to us at <a href="mailto:founders@savageinter.net">founders@savageinter.net</a>!</div>
+      <div class="social">
+        Want to talk? Reach out to us:<br/>
+        <a href="https://facebook.com/savageinternet/"><img src="img/social/facebook.png"></a>
+        <a href="mailto:founders@savageinter.net"><img src="img/social/email.png"></a>
+      </div>
     </div>
   </div>
 </div>
