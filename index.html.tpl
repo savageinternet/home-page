@@ -16,6 +16,7 @@
     <div id="nav">
       <span>Projects</span>
       <a href="/consulting.html">Consulting</a>
+      <a href="https://blog.savageinter.net/">Blog</a>
       <a href="/team.html">Team</a>
     </div>
   </div>
