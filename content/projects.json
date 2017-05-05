@@ -6,6 +6,14 @@
     "links": [],
     "description": "expedition! connects people around location-based educational quests. Currently in development."
   }, {
+    "thumb": "puzzling-madness-300.png",
+    "title": "Puzzling Madness",
+    "tags": ["rw", "g", "ed"],
+    "links": [
+      {"title": "Puzzling Madness Home", "href": "https://puzzlingmadness.ca"}
+    ],
+    "description": "The Puzzling Madness of John A. Macdonald is a puzzle/scavenger hunt across Downtown Toronto. Designed for the Canada 150 celebration, it features puzzles set in Toronto of 1867. It leverages historical handbills, maps, and sites, and casts players in the roles of actual people from that time. Games run from the end of June until the end of August 2017, see site for details."
+  },  {
     "thumb": "hoedown-300.jpg",
     "title": "Kinoma Hoedown",
     "tags": ["el", "fab", "g"],
@@ -31,13 +39,7 @@
       {"title": "Download on Google Play", "href": "https://play.google.com/store/apps/details?id=net.savageinter.locatrix"}
     ],
     "description": "Locatrix tracks your movements on a macro scale, with your privacy in mind. On a long trip, it keeps friends and family updated with what city you’re in, but not where you spent your Saturday night. For remote work, your boss will always know your timezone, but not that you sometimes take meetings from the beach."
-  }, {
-    "thumb": "toronto-at-confederation-300.jpg",
-    "title": "Toronto At Confederation",
-    "tags": ["rw", "g", "ed"],
-    "links": [],
-    "description": "Toronto at Confederation is a puzzle hunt across Downtown Toronto. Designed for the Canada 150 celebration, it features puzzles set in Toronto of 1867. It leverages historical handbills, maps, and sites, and casts players in the roles of actual people from that time. We are currently developing puzzles and materials, and will release the game in July for Canada Day."
-  }, {
+  },{
     "thumb": "pussyhat-300.jpg",
     "title": "#resist shop",
     "tags": ["fab"],
