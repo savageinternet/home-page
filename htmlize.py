@@ -31,7 +31,6 @@ def make_page(filename, html):
 
 
 def make_index_page(projects):
-    print(projects)
     html = render('index', {
         'pageTitle': 'Savage Internet',
         'projects': projects
