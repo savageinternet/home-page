@@ -1,18 +1,21 @@
-all: copy
+all: npm less pyth copy
 
-copy: build/css/style.css build/content/projects.html build/index.html
-	cp -r consulting.html favicon.ico fonts google2ef4f2b4bcd33bf5.html img js robots.txt team.html build
+npm: package.json
+	npm install
 
-build/css/style.css: less/style.less
+less: npm
 	mkdir -p build/css
 	./node_modules/less/bin/lessc less/style.less build/css/style.css
 
-build/content/projects.html: content/projects.json content/projects.mustache
-	mkdir -p build/content
-	./node_modules/mustache/bin/mustache content/projects.json content/projects.mustache > build/content/projects.html
+pyth: requirements.txt htmlize.py
+	pip install -r requirements.txt
+	python htmlize.py
 
-build/index.html: index.html.tpl build/content/projects.html
-	sed -e '/{PROJECTS}/{r build/content/projects.html' -e 'd}' index.html.tpl > build/index.html
+copy: pyth less
+	cp -r google2ef4f2b4bcd33bf5.html favicon.ico fonts img js robots.txt build
+
+run:
+	cd build && python -m http.server
 
 clean:
 	rm -r build

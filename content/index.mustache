@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+{{> head}}
+<body>
+<div id="root">
+  {{> header}}
+  <div id="body">
+    <div id="main">
+      <div id="tags">
+        <span class="tag ed">education</span>
+        <span class="tag el">electronics</span>
+        <span class="tag fab">fabrication</span>
+        <span class="tag g">games</span>
+        <span class="tag rw">real-world</span>
+        <span class="tag viz">visualization</span>
+      </div>
+      <div id="projects">
+        {{#projects}}
+          {{> projectShort}}
+        {{/projects}}
+      </div>
+      <div id="project_details" class="hide">
+        <div id="project_details_wrapper">
+          <div id="project_details_title"></div>
+          <div id="project_details_description"></div>
+        </div>
+      </div>
+      <div class="social">
+        Want to talk? Reach out to us:<br/>
+        <a href="https://facebook.com/savageinternet/"><img src="img/social/facebook.png"></a>
+        <a href="mailto:founders@savageinter.net"><img src="img/social/email.png"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/index.js"></script>
+</body>
+</html>
