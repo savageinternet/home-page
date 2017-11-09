@@ -16,12 +16,6 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
-.heading() {
-  font-family: Ashby, serif;
-  font-weight: 800;
-  font-size: 32px;
-}
-
 // COLORS
 
 @color-r: #cd0f22;
@@ -36,6 +30,10 @@
 @color-em: @color-y;
 @color-link: @color-g;
 
+// SIZES
+
+@header-height: 64px;
+
 // MAIN
 
 @px-main-width: 1024px;
@@ -45,7 +43,7 @@ body, html {
   margin: 0;
   min-width: @px-main-width;
   font-family: 'Josefin Sans', sans-serif;
-  color: @color-fg;
+  color: @color-b;
   background-color: @color-bg;
   font-size: 20px;
 }
@@ -81,6 +79,13 @@ em {
   font-weight: 800;
 }
 
+h2 {
+  color: @color-r;
+  font-family: Ashby, serif;
+  font-weight: 800;
+  font-size: 32px;
+}
+
 // LAYOUT
 
 #root {
@@ -95,22 +100,23 @@ em {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: @header-height;
   position: fixed;
   width: 100%;
   z-index: 1;
 }
 
 #nav {
+  font-family: Ashby, serif;
+  font-weight: 800;
+  font-size: 24px;
   text-align: right;
   padding: 8px;
-  .heading();
 }
 
 #nav > a,
 #nav > span {
-  margin-right: 32px;
-  text-decoration: none;
+  margin-right: 8px;
 }
 #nav > span {
   color: @color-r;
@@ -121,11 +127,11 @@ em {
 }
 
 #logo > a > img {
-  height: 75px;
+  height: 48px;
 }
 
 #body {
-  margin-top: 100px;
+  margin-top: @header-height;
 }
 
 #main {
@@ -174,31 +180,35 @@ em {
 
 .tag.ed { .tag-colors(@color-r); }
 .tag.el { .tag-colors(@color-o); }
-.tag.fab { .tag-colors(@color-y); }
+.tag.fab { .tag-colors(darken(@color-y, @percent-change)); }
 .tag.g { .tag-colors(@color-g); }
 .tag.rw { .tag-colors(@color-b); }
-.tag.viz { .tag-colors(@color-v); }
+.tag.sw { .tag-colors(@color-v); }
+.tag.viz { .tag-colors(@color-fg); }
 
 .tag.ed:hover { .tag-colors(darken(@color-r, @percent-change)); }
 .tag.el:hover { .tag-colors(darken(@color-o, @percent-change)); }
-.tag.fab:hover { .tag-colors(darken(@color-y, @percent-change)); }
+.tag.fab:hover { .tag-colors(darken(@color-y, @percent-change * 2)); }
 .tag.g:hover { .tag-colors(darken(@color-g, @percent-change)); }
 .tag.rw:hover { .tag-colors(darken(@color-b, @percent-change)); }
-.tag.viz:hover { .tag-colors(darken(@color-v, @percent-change)); }
+.tag.sw:hover { .tag-colors(darken(@color-v, @percent-change)); }
+.tag.viz:hover { .tag-colors(darken(@color-fg, @percent-change)); }
 
 .tag.ed.active { .tag-colors-active(@color-r); }
 .tag.el.active { .tag-colors-active(@color-o); }
-.tag.fab.active { .tag-colors-active(@color-y); }
+.tag.fab.active { .tag-colors-active(darken(@color-y, @percent-change)); }
 .tag.g.active { .tag-colors-active(@color-g); }
 .tag.rw.active { .tag-colors-active(@color-b); }
-.tag.viz.active { .tag-colors-active(@color-v); }
+.tag.sw.active { .tag-colors-active(@color-v); }
+.tag.viz.active { .tag-colors-active(@color-fg); }
 
 .tag.ed.active:hover { .tag-colors-active(lighten(@color-r, @percent-change)); }
 .tag.el.active:hover { .tag-colors-active(lighten(@color-o, @percent-change)); }
-.tag.fab.active:hover { .tag-colors-active(lighten(@color-y, @percent-change)); }
+.tag.fab.active:hover { .tag-colors-active(@color-y); }
 .tag.g.active:hover { .tag-colors-active(lighten(@color-g, @percent-change)); }
 .tag.rw.active:hover { .tag-colors-active(lighten(@color-b, @percent-change)); }
-.tag.viz.active:hover { .tag-colors-active(lighten(@color-v, @percent-change)); }
+.tag.sw.active:hover { .tag-colors-active(lighten(@color-v, @percent-change)); }
+.tag.viz.active:hover { .tag-colors-active(lighten(@color-fg, @percent-change)); }
 
 // PROJECTS
 
@@ -207,6 +217,7 @@ em {
   flex-wrap: wrap;
   margin: 0 auto;
   overflow: hidden;
+  padding: 32px 0 64px 0;
 }
 .project {
   position: relative;
@@ -274,7 +285,8 @@ em {
 .project-wrapper.fab > .project-link:before { background: fade(@color-y, 60%); }
 .project-wrapper.g > .project-link:before { background: fade(@color-g, 60%); }
 .project-wrapper.rw > .project-link:before { background: fade(@color-b, 60%); }
-.project-wrapper.viz > .project-link:before { background: fade(@color-v, 60%); }
+.project-wrapper.sw > .project-link:before { background: fade(@color-v, 60%); }
+.project-wrapper.viz > .project-link:before { background: fade(@color-fg, 70%); }
 
 .project-wrapper:hover > .project-link:before { background: fade(@color-bg, 40%); }
 

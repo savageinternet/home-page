@@ -1,7 +1,7 @@
 [{
   "thumb": "expedition-300.png",
   "title": "expedition!",
-  "tags": ["ed", "g", "rw"],
+  "tags": ["ed", "g", "rw", "sw"],
   "links": [],
   "description": "expedition! connects people around location-based educational quests. Currently in development."
 }, {
@@ -15,7 +15,7 @@
 }, {
   "thumb": "datasense-300.png",
   "title": "Data Sense",
-  "tags": ["ed", "viz"],
+  "tags": ["ed", "viz", "sw"],
   "links": [
     {"title": "Data Sense", "href": "https://makesenseofdata.com"}
   ],
@@ -23,7 +23,7 @@
 }, {
   "thumb": "locatrix-300.jpg",
   "title": "Locatrix",
-  "tags": ["rw", "viz"],
+  "tags": ["rw", "viz", "sw"],
   "links": [
     {"title": "Locatrix Home Page", "href": "https://locatrix.savageinter.net"},
     {"title": "Download on Google Play", "href": "https://play.google.com/store/apps/details?id=net.savageinter.locatrix"}
@@ -42,7 +42,7 @@
 }, {
   "thumb": "hoedown-300.jpg",
   "title": "Kinoma Hoedown",
-  "tags": ["el", "fab", "g"],
+  "tags": ["el", "fab", "g", "sw"],
   "links": [
     {"title": "Kinoma Blog Post", "href": "http://blog.kinoma.com/2014/06/hoedown-with-the-savages-and-kinoma-create/"},
     {"title": "Github Repository", "href": "https://github.com/savageinternet/hoedown"}
@@ -76,7 +76,7 @@
 }, {
   "thumb": "heve-300.jpg",
   "title": "Hello, Velo!",
-  "tags": ["el", "fab"],
+  "tags": ["el", "fab", "sw"],
   "links": [
     {"title": "Kinoma Blog Post", "href": "http://blog.kinoma.com/2016/08/hello-velo"},
     {"title": "Instructable for Hello, Velo!", "href": "http://www.instructables.com/id/Hello-Velo-the-Internet-of-Two-Wheeled-Things/"},
@@ -122,13 +122,13 @@
 }, {
   "thumb": "lot-300.png",
   "title": "USGS Terrain Data in OpenSCAD",
-  "tags": ["fab", "viz"],
+  "tags": ["fab", "viz", "sw"],
   "links": [],
   "description": "Valkyrie’s parents are working to design a home and landscape on their rural property: as a gift to them we created a 3D model of the lot using elevation data from the USGS and satellite imagery from Google Maps."
 }, {
   "thumb": "async-300.png",
   "title": "Talk: Async JS Patterns",
-  "tags": ["ed"],
+  "tags": ["ed", "sw"],
   "links": [
     {"title": "Interactive Talk Slides (HTML / JS)", "href": "http://candu.github.io/presentations/html/20140729-jquery-async-javascript/"}
   ],
@@ -159,7 +159,7 @@
 }, {
   "thumb": "datafist-300.png",
   "title": "datafist",
-  "tags": ["ed", "viz"],
+  "tags": ["ed", "viz", "sw"],
   "links": [
     {"title": "Github Repository", "href": "https://github.com/candu/datafist"}
   ],
@@ -167,13 +167,13 @@
 }, {
   "thumb": "bats-300.png",
   "title": "Scientific Visualization",
-  "tags": ["viz"],
+  "tags": ["viz", "sw"],
   "links": [],
   "description": "Working with researchers from Eastern Michigan University and University of Michigan at Ann Arbor, we helped process data and craft visualizations of bat migrations tracked with sonic detectors. Silver-haired bat photo credit: Heather Adams, by permission."
 }, {
   "thumb": "toroid-300.png",
   "title": "Toroid: Tor Node Map",
-  "tags": ["viz"],
+  "tags": ["viz", "sw"],
   "links": [
     {"title": "Live Map", "href": "https://toroid.savageinter.net/"},
     {"title": "Github Repository", "href": "https://github.com/candu/toroid"}
