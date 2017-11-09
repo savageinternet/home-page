@@ -37,6 +37,14 @@ def make_index_page(projects):
     })
     make_page('index.html', html)
 
+def make_project_pages(projects):
+    for project in projects:
+        html = render('projectPage', {
+            'pageTitle': project['title'] + ' - Savage Internet',
+            'project': project
+        })
+        make_page(project['filename'], html)
+
 
 def load_json(fname):
     with open(fname) as jsonFile:
@@ -53,7 +61,10 @@ def get_project_filename(project):
 
 def main():
     projects = load_json(PROJECTS_FILENAME)
+    for project in projects:
+      project['filename'] = get_project_filename(project)
     make_index_page(projects)
+    make_project_pages(projects)
 
 
 if __name__ == '__main__':
