@@ -26,7 +26,7 @@
 
 @color-r: #cd0f22;
 @color-o: #c63;
-@color-y: #fc3;
+@color-y: darken(#fc3, 5%);
 @color-g: #393;
 @color-b: #369;
 @color-v: #639;
@@ -135,6 +135,8 @@ em {
   text-align: center;
 }
 
+// TAGS
+
 #tags > .tag {
   margin-right: 24px;
   margin-top: 12px;
@@ -198,67 +200,131 @@ em {
 .tag.rw.active:hover { .tag-colors-active(lighten(@color-b, @percent-change)); }
 .tag.viz.active:hover { .tag-colors-active(lighten(@color-v, @percent-change)); }
 
+// PROJECTS
+
 #projects {
-  text-align: left;
-  width: 972px;
-  margin: 24px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  overflow: hidden;
 }
-
 .project {
-  border: 3px solid @color-bg;
-  border-radius: 16px 16px 0 0;
-  display: inline-block;
-}
-
-.project-wrapper {
-  padding: 7px;
-  width: 314px;
-  height: 314px;
-  border-radius: 12px;
   position: relative;
-  cursor: pointer;
+  visibility: hidden;
+  outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
 }
-
-.project.selected > .project-wrapper {
-  border-radius: 12px 12px 0 0;
+.project::after {
+  content: '';
+  display: block;
+  padding-bottom: 86.602%;  /* =  100 / tan(60) * 1.5 */
 }
-
-.wrapper-color(@color) {
-  background-color: @color;
-}
-
-.project-wrapper.ed { .wrapper-color(@color-r); }
-.project-wrapper.el { .wrapper-color(@color-o); }
-.project-wrapper.fab { .wrapper-color(@color-y); }
-.project-wrapper.g { .wrapper-color(@color-g); }
-.project-wrapper.rw { .wrapper-color(@color-b); }
-.project-wrapper.viz { .wrapper-color(@color-v); }
-
-.project-image {
-  border-radius: 10px;
-  width: 300px;
-  height: 300px;
-}
-
-.project-tags {
+.project-wrapper {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  width: 96%;
+  padding-bottom: 110.851%; /* =  width / sin(60) */
+  margin: 0 2%;
+  overflow: hidden;
+  visibility: hidden;
+  outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
+  transform: rotate3d(0,0,1,-60deg) skewY(30deg);
 }
-
-.project-tags > .tag {
-  height: 50px;
-  width: 50px;
+.project-wrapper * {
+  position: absolute;
+  visibility: visible;
+  outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
+}
+.project-link {
+  display: block;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  line-height: 30px;
-  border-radius: 25px;
-  opacity: 0;
-  transition: opacity 100ms;
+  color: #fff;
+  overflow: hidden;
+  transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+}
+.project-tags {
+  display: none;
+}
+.project-image {
+  left: -100%;
+  right: -100%;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  transform: rotate3d(0,0,0,0deg);
 }
 
-.project-wrapper:hover > .project-tags > .tag,
-.project-tags > .tag.active {
-  opacity: 1;
+// HIGHLIGHTS
+
+.project-link:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  transition: all .2s linear;
+  z-index: 2;
+}
+
+.project-wrapper.ed > .project-link:before { background: fade(@color-r, 60%); }
+.project-wrapper.el > .project-link:before { background: fade(@color-o, 70%); }
+.project-wrapper.fab > .project-link:before { background: fade(@color-y, 60%); }
+.project-wrapper.g > .project-link:before { background: fade(@color-g, 60%); }
+.project-wrapper.rw > .project-link:before { background: fade(@color-b, 60%); }
+.project-wrapper.viz > .project-link:before { background: fade(@color-v, 60%); }
+
+.project-wrapper:hover > .project-link:before { background: fade(@color-bg, 40%); }
+
+/*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
+@media (min-width:1201px) { /* <- 5-4 per row */
+  #projects{
+    padding-bottom: 4.4%
+  }
+  .project {
+    width: 20%; /* = 100 / 5 */
+  }
+  .project:nth-child(9n+6){ /* first.projectagon of even rows */
+    margin-left:10%;  /* = width of .project / 2  to indent even rows */
+  }
+}
+
+@media (max-width: 1200px) and (min-width:901px) { /* <- 4-3 per row */
+  #projects{
+    padding-bottom: 5.5%
+  }
+  .project {
+    width: 25%; /* = 100 / 4 */
+  }
+  .project:nth-child(7n+5){ /* first of even rows */
+    margin-left:12.5%;  /* = width of .project / 2  to indent even rows */
+  }
+}
+
+@media (max-width: 900px) and (min-width:601px) { /* <- 3-2 per row */
+  #projects{
+    padding-bottom: 7.4%
+  }
+  .project {
+    width: 33.333%; /* = 100 / 3 */
+  }
+  .project:nth-child(5n+4){ /* first.projectagon of even rows */
+    margin-left:16.666%;  /* = width of .project / 2  to indent even rows */
+  }
+}
+
+@media (max-width: 600px) { /* <- 2-1 per row */
+  #projects{
+    padding-bottom: 11.2%
+  }
+  .project {
+    width: 50%; /* = 100 / 3 */
+  }
+  .project:nth-child(3n+3){ /* first.projectagon of even rows */
+    margin-left:25%;  /* = width of .project / 2  to indent even rows */
+  }
 }
 
 // CONSULTING

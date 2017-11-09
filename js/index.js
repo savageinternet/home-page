@@ -5,8 +5,7 @@
       activeTagName = null,
       $tags = $$('#tags > .tag'),
       $projectsParent = $id('projects'),
-      $projects = $$('#projects > .project'),
-      $projectTags = $$('.project-tags > .tag');
+      $projects = $$('#projects > .project');
 
   // TAG SELECTION
 
@@ -61,5 +60,4 @@
   }
 
   $tags.forEach(attachTagListener);
-  $projectTags.forEach(attachTagListener);
 })();
