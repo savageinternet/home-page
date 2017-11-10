@@ -54,7 +54,7 @@ def load_json(fname):
 def get_project_filename(project):
     title = project.get('titleShort', project['title'])
     title = title.lower()
-    title = re.sub('[!@#$\'\. ,:]+', '-', title)
+    title = re.sub('[!@#$\'\. ,:&]+', '-', title)
     title = title.strip('-')
     return title + '.html'
 
