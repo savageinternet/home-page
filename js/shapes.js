@@ -6,6 +6,15 @@ window.$id = document.getElementById.bind(document);
   var body = document.body,
       html = document.documentElement;
 
+  function getPageWidth() {
+    return Math.max(
+      body.scrollWidth,
+      body.offsetWidth,
+      html.clientWidth,
+      html.scrollWidth,
+      html.offsetWidth);
+  }
+
   // see https://stackoverflow.com/questions/1145850/how-to-get-height-of-entire-document-with-javascript
   function getPageHeight() {
     return Math.max(
@@ -22,10 +31,9 @@ window.$id = document.getElementById.bind(document);
       colorClasses = 'rbyg',
       sides = [3, 4, 5, 6],
       paths = sides.map(path),
-      pageHeight = getPageHeight();
-
-  svg.setAttribute('height', pageHeight);
-
+      pageHeight = getPageHeight(),
+      probablyMobile = getPageWidth() < 800;
+      
   function chooseIndexOtherThan(xs, i) {
     var j = i;
     while (j === i) {
@@ -46,18 +54,19 @@ window.$id = document.getElementById.bind(document);
     return parts.join('');
   }
 
-  function transform(x, y, theta) {
-    return 'translate(' + x + ', ' + y + ') rotate(' + theta + ')';
+  function transform(x, y, theta, scale) {
+    return 'translate(' + x + ', ' + y + ') rotate(' + theta + ') scale(' + scale + ')';
   }
 
   function makeShape(c, p, x, y) {
     var colorClass = colorClasses[c],
         d = paths[p],
         theta = Math.floor(360 * Math.random()),
+        scale = probablyMobile ? 0.6 : 1,
         p = document.createElementNS("http://www.w3.org/2000/svg", 'path');
     p.classList.add(colorClass);
     p.setAttribute('d', d);
-    p.setAttribute('transform', transform(x, y, theta));
+    p.setAttribute('transform', transform(x, y, theta, scale));
     return p;
   }
 
@@ -67,14 +76,15 @@ window.$id = document.getElementById.bind(document);
         p = chooseIndexOtherThan(paths, -1),
         x,
         y = 25,
+        dx = probablyMobile ? 48 : 80,
         dy = 25.0;
     while (y < pageHeight) {
-      x = 20 + Math.round(80 * Math.random());
+      x = dx / 4 + Math.round(dx * Math.random());
       if (i % 2 === 0) {
-        x += 80;
+        x += dx;
       }
       if (i % 5 === 0) {
-        x += 80;
+        x += dx;
       }
       var shape = makeShape(c, p, x, y);
       svg.appendChild(shape);
@@ -100,11 +110,13 @@ window.$id = document.getElementById.bind(document);
   function onresize() {
     svg.innerHTML = '';
     svg.setAttribute('height', 0);
+    probablyMobile = getPageWidth() < 800;
     pageHeight = getPageHeight();
+    svg.setAttribute('width', probablyMobile ? 180 : 300);
     svg.setAttribute('height', pageHeight);
     makeRandomShapes();
   }
 
-  makeRandomShapes();
+  onresize();
   window.addEventListener('resize', debounce(onresize, 250));
 })();
