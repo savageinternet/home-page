@@ -99,6 +99,7 @@ window.$id = document.getElementById.bind(document);
 
   function onresize() {
     svg.innerHTML = '';
+    svg.setAttribute('height', 0);
     pageHeight = getPageHeight();
     svg.setAttribute('height', pageHeight);
     makeRandomShapes();
