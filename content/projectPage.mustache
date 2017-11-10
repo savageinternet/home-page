@@ -15,10 +15,9 @@
     <div class="project-desc">
         {{project.description}}
     </div>
-    This should display whole tag names... :(
-    <div class="project-tags">
+    <div id="tags">
       {{#project.tags}}
-        <div class="tag {{.}}">{{.}}</div>
+        <span class="tag {{short}} active">{{long}}</span>
       {{/project.tags}}
     </div>
 </div>

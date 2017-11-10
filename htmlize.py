@@ -58,11 +58,23 @@ def get_project_filename(project):
     title = title.strip('-')
     return title + '.html'
 
+def add_tag_longnames(tags):
+    longnames = {
+      'ed':'education',
+      'el':'electronics',
+      'fab':'fabrication',
+      'g':'games',
+      'rw':'real-world',
+      'sw':'software',
+      'viz':'visualization'
+    }
+    return list(map(lambda x:{'short':x, 'long':longnames[x]}, tags))
 
 def main():
     projects = load_json(PROJECTS_FILENAME)
     for project in projects:
       project['filename'] = get_project_filename(project)
+      project['tags'] = add_tag_longnames(project['tags'])
     make_index_page(projects)
     make_project_pages(projects)
 
