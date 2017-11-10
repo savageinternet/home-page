@@ -69,7 +69,8 @@ def add_tag_longnames(tags):
         'sw': 'software',
         'viz': 'visualization'
     }
-    return list(map(lambda x: {'short': x, 'long': longnames[x]}, tags))
+    tags = list(map(lambda x: {'short': x, 'long': longnames[x]}, tags))
+    return sorted(tags, key=lambda x: x['long'])
 
 
 def main():
