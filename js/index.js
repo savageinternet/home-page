@@ -23,7 +23,7 @@
       paths = sides.map(path),
       pageHeight = getPageHeight();
 
-  svg.setAttribute('viewBox', viewBox());
+  svg.setAttribute('height', pageHeight);
 
   function chooseIndexOtherThan(xs, i) {
     var j = i;
@@ -47,11 +47,6 @@
 
   function transform(x, y, theta) {
     return 'translate(' + x + ', ' + y + ') rotate(' + theta + ')';
-  }
-
-  function viewBox() {
-    var y = window.scrollY;
-    return '0 ' + y + ' 300 ' + window.innerHeight;
   }
 
   function makeShape(c, p, x, y) {
@@ -90,11 +85,26 @@
       dy *= 1.07;
     }
   }
-  
+
+  function debounce(fn, t) {
+    var timeout = null;
+    return function() {
+      if (timeout !== null) {
+        window.clearTimeout(timeout);
+      }
+      timeout = window.setTimeout(fn, t);
+    };
+  }
+
+  function onresize() {
+    svg.innerHTML = '';
+    pageHeight = getPageHeight();
+    svg.setAttribute('height', pageHeight);
+    makeRandomShapes();
+  }
+
   makeRandomShapes();
-  window.addEventListener('scroll', function() {
-    svg.setAttribute('viewBox', viewBox());
-  });
+  window.addEventListener('resize', debounce(onresize, 250));
 
   // TAG SELECTION
 
