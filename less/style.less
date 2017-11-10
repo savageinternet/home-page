@@ -25,7 +25,7 @@
 @color-b: #369;
 @color-v: #639;
 
-@color-bg: #fff;
+@color-bg: #fdfdff;
 @color-fg: #322e22;
 @color-em: @color-y;
 @color-link: @color-g;
@@ -103,7 +103,7 @@ h2 {
   height: @header-height;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 #nav {
@@ -132,6 +132,7 @@ h2 {
 
 #body {
   margin-top: @header-height;
+  z-index: 1;
 }
 
 #main {
@@ -139,6 +140,32 @@ h2 {
   padding: 8px;
   margin: auto;
   text-align: center;
+}
+
+// SHAPES SIDEBAR
+
+#shapes {
+  opacity: 0.3;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  & > path {
+    stroke: none;
+    &.r {
+      fill: @color-r;
+    }
+    &.b {
+      fill: @color-b;
+    }
+    &.y {
+      fill: @color-y;
+    }
+    &.g {
+      fill: @color-g;
+    }
+  }
 }
 
 // SECTION DIVIDERS
