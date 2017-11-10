@@ -10,14 +10,14 @@ window.$id = document.getElementById.bind(document);
   function getPageHeight() {
     return Math.max(
       body.scrollHeight,
-      body.offsetHeight, 
+      body.offsetHeight,
       html.clientHeight,
       html.scrollHeight,
       html.offsetHeight);
   }
 
   // SVG SHAPES
-  
+
   var svg = $id('shapes'),
       colorClasses = 'rbyg',
       sides = [3, 4, 5, 6],

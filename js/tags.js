@@ -57,4 +57,9 @@
   }
 
   $tags.forEach(attachTagListener);
+
+  // Handles for other things on page that activate tags
+  var $tagActivators = $$('.tagger');
+
+  $tagActivators.forEach(attachTagListener);
 })();
