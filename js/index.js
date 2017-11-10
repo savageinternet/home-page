@@ -75,8 +75,8 @@
       if (i % 5 === 0) {
         x += 80;
       }
-      var p = makeShape(c, p, x, y);
-      svg.appendChild(p);
+      var shape = makeShape(c, p, x, y);
+      svg.appendChild(shape);
 
       i++;
       c = chooseIndexOtherThan(colorClasses, c);
