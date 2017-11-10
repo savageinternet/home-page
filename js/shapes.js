@@ -10,14 +10,14 @@ window.$id = document.getElementById.bind(document);
   function getPageHeight() {
     return Math.max(
       body.scrollHeight,
-      body.offsetHeight, 
+      body.offsetHeight,
       html.clientHeight,
       html.scrollHeight,
       html.offsetHeight);
   }
 
   // SVG SHAPES
-  
+
   var svg = $id('shapes'),
       colorClasses = 'rbyg',
       sides = [3, 4, 5, 6],
@@ -106,4 +106,71 @@ window.$id = document.getElementById.bind(document);
 
   makeRandomShapes();
   window.addEventListener('resize', debounce(onresize, 250));
+<<<<<<< HEAD:js/shapes.js
+=======
+
+  // TAG SELECTION
+
+  var activeTagName = null,
+      $tags = $$('#tags > .tag'),
+      $projectsParent = $id('projects'),
+      $projects = $$('#projects > .project');
+
+  function getTagName($tag) {
+    return $tag.classList[1];
+  }
+
+  function deactivateTag(tagName) {
+    var tagSelector = '#tags > .tag.' + tagName;
+    $(tagSelector).classList.remove('active');
+    var projectTagSelector = '.project-tags > .tag.' + tagName;
+    $$(projectTagSelector).forEach(function($tag) {
+      $tag.classList.remove('active');
+      var $wrapper = $tag.parentNode.parentNode;
+      $wrapper.classList.remove(tagName);
+    });
+  }
+
+  function activateTag(tagName) {
+    var tagSelector = '#tags > .tag.' + tagName;
+    $(tagSelector).classList.add('active');
+    var projectTagSelector = '.project-tags > .tag.' + tagName;
+    $$(projectTagSelector).forEach(function($tag) {
+      $tag.classList.add('active');
+      var $wrapper = $tag.parentNode.parentNode;
+      $wrapper.classList.add(tagName);
+    });
+  }
+
+  function clearActiveTagName() {
+    deactivateTag(activeTagName);
+    activeTagName = null;
+  }
+
+  function setActiveTagName(tagName) {
+    if (activeTagName !== null) {
+      deactivateTag(activeTagName);
+    }
+    activeTagName = tagName;
+    activateTag(activeTagName);
+  }
+
+  function attachTagListener($tag) {
+    var tagName = getTagName($tag);
+    $tag.addEventListener('click', function() {
+      if (tagName === activeTagName) {
+        clearActiveTagName();
+      } else {
+        setActiveTagName(tagName);
+      }
+    }, false);
+  }
+
+  $tags.forEach(attachTagListener);
+
+  // Handles for other things on page that activate tags
+  var $tagActivators = $$('.tagger');
+
+  $tagActivators.forEach(attachTagListener);
+>>>>>>> can now link to and activate tags, updated main page styling:js/index.js
 })();

@@ -27,7 +27,7 @@
 
 @color-bg: #fdfdff;
 @color-fg: #322e22;
-@color-em: @color-y;
+@color-em: darken(@color-y, 10%);
 @color-link: @color-g;
 
 // SIZES
@@ -73,10 +73,23 @@ a:active {
 }
 
 em {
-  color: darken(@color-y, 10%);
+  color: @color-em;
   font-family: Ashby, serif;
   font-style: normal;
   font-weight: 800;
+}
+
+em > a,
+em > a:visited {
+  color: @color-em;
+  text-decoration: none;
+  text-decoration-color: @color-em;
+}
+
+em > a:hover, em > a:active {
+  color: @color-em;
+  text-decoration: underline;
+  text-decoration-color: @color-em;
 }
 
 h2 {
@@ -174,19 +187,6 @@ h2 {
   background-repeat: space no-repeat;
   height: 28px;
   margin: 32px 0;
-}
-
-// TEXT
-
-#top > p > a,
-#top > p > a:visited {
-  text-decoration: none;
-  text-decoration-color: @color-y;
-}
-
-#top > p > a:hover {
-  text-decoration: underline;
-  text-decoration-color: @color-y;
 }
 
 // TAGS
@@ -432,17 +432,6 @@ h2 {
     height: 300px;
     border-radius: 150px;
   }
-}
-
-.team-member > h2 > a,
-.team-member > h2 > a:visited {
-  text-decoration: none;
-  text-decoration-color: @color-y;
-}
-
-.team-member > h2 > a:hover {
-  text-decoration: underline;
-  text-decoration-color: @color-y;
 }
 
 // FOOTER
