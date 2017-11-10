@@ -36,12 +36,9 @@
 
 // MAIN
 
-@px-main-width: 1024px;
-
 body, html {
   padding: 0;
   margin: 0;
-  min-width: @px-main-width;
   font-family: 'Josefin Sans', sans-serif;
   color: @color-b;
   background-color: @color-bg;
@@ -149,10 +146,10 @@ h2 {
 }
 
 #main {
-  width: @px-main-width;
   padding: 8px;
   margin: auto;
   text-align: center;
+  width: 100%;
 }
 
 // SHAPES SIDEBAR
@@ -338,55 +335,6 @@ h2 {
 
 .project-wrapper:hover > .project-link:before { background: fade(@color-bg, 40%); }
 
-/*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-@media (min-width:1201px) { /* <- 5-4 per row */
-  #projects{
-    padding-bottom: 4.4%
-  }
-  .project {
-    width: 20%; /* = 100 / 5 */
-  }
-  .project:nth-child(9n+6){ /* first.projectagon of even rows */
-    margin-left:10%;  /* = width of .project / 2  to indent even rows */
-  }
-}
-
-@media (max-width: 1200px) and (min-width:901px) { /* <- 4-3 per row */
-  #projects{
-    padding-bottom: 5.5%
-  }
-  .project {
-    width: 25%; /* = 100 / 4 */
-  }
-  .project:nth-child(7n+5){ /* first of even rows */
-    margin-left:12.5%;  /* = width of .project / 2  to indent even rows */
-  }
-}
-
-@media (max-width: 900px) and (min-width:601px) { /* <- 3-2 per row */
-  #projects{
-    padding-bottom: 7.4%
-  }
-  .project {
-    width: 33.333%; /* = 100 / 3 */
-  }
-  .project:nth-child(5n+4){ /* first.projectagon of even rows */
-    margin-left:16.666%;  /* = width of .project / 2  to indent even rows */
-  }
-}
-
-@media (max-width: 600px) { /* <- 2-1 per row */
-  #projects{
-    padding-bottom: 11.2%
-  }
-  .project {
-    width: 50%; /* = 100 / 3 */
-  }
-  .project:nth-child(3n+3){ /* first.projectagon of even rows */
-    margin-left:25%;  /* = width of .project / 2  to indent even rows */
-  }
-}
-
 // PROJECT PAGE
 
 .project-main {
@@ -439,4 +387,51 @@ h2 {
 footer {
   font-size: 16px;
   text-align: center;
+}
+
+// RESPONSIVE
+
+.hexagon-sizing(@n) {
+  @width: 100% / @n;
+  @two-rows: @n * 2 - 1;
+  @row-plus-one: @n + 1;
+
+  padding-bottom: @width * 2 / 9;
+  & > .project {
+    width: @width;
+    &:nth-child(@{two-rows}n+@{row-plus-one}) {
+      margin-left: @width / 2;
+    }
+  }
+}
+
+/*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
+@media (max-width: 639px) {
+  #projects {
+    .hexagon-sizing(2);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 800px) {
+  #projects {
+    .hexagon-sizing(3);
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1024px) {
+  #main {
+    width: 800px;
+  }
+  #projects {
+    .hexagon-sizing(4);
+  }
+}
+
+@media (min-width: 1024px) {
+  #main {
+    width: 1024px;
+  }
+  #projects {
+    .hexagon-sizing(5);
+  }
 }
