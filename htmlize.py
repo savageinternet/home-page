@@ -3,7 +3,6 @@ import pystache
 import json
 import os
 import re
-import sys
 
 ROOT = os.path.dirname(os.path.realpath(__file__))
 IN_DIR = os.path.join(ROOT, 'content')
@@ -26,7 +25,7 @@ def render(template_name, data):
 def make_page(filename, html):
     path = os.path.join(OUT_DIR, filename)
     print('Generating {0}...'.format(path))
-    with open(path, 'w+') as f:
+    with open(path, 'w') as f:
         f.write(html)
 
 
@@ -36,6 +35,7 @@ def make_index_page(projects):
         'projects': projects
     })
     make_page('index.html', html)
+
 
 def make_project_pages(projects):
     for project in projects:
@@ -58,23 +58,25 @@ def get_project_filename(project):
     title = title.strip('-')
     return title + '.html'
 
+
 def add_tag_longnames(tags):
     longnames = {
-      'ed':'education',
-      'el':'electronics',
-      'fab':'fabrication',
-      'g':'games',
-      'rw':'real-world',
-      'sw':'software',
-      'viz':'visualization'
+        'ed': 'education',
+        'el': 'electronics',
+        'fab': 'fabrication',
+        'g': 'games',
+        'rw': 'real-world',
+        'sw': 'software',
+        'viz': 'visualization'
     }
-    return list(map(lambda x:{'short':x, 'long':longnames[x]}, tags))
+    return list(map(lambda x: {'short': x, 'long': longnames[x]}, tags))
+
 
 def main():
     projects = load_json(PROJECTS_FILENAME)
     for project in projects:
-      project['filename'] = get_project_filename(project)
-      project['tags'] = add_tag_longnames(project['tags'])
+        project['filename'] = get_project_filename(project)
+        project['tags'] = add_tag_longnames(project['tags'])
     make_index_page(projects)
     make_project_pages(projects)
 

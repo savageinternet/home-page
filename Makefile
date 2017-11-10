@@ -18,4 +18,4 @@ run: copy
 	cd build && python -m http.server
 
 clean:
-	rm -r build
+	rm -r build/*

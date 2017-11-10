@@ -4,22 +4,40 @@
 <body>
 <div id="root">
   {{> header}}
+  <svg id="shapes" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
   <div id="body">
-    <img class="project-image" src="/img/projects/{{project.thumb}}" alt="{{project.title}}">
-    <div class="project-title">{{project.title}}</div>
-    <div class="project-links">
-      {{#project.links}}
-        <a href="{{href}}">{{title}}</a>
-      {{/project.links}}
+    <div id="main" class="project-main">
+      {{#project}}
+      <div class="project-header">
+        <div class="project">
+          <div class="project-wrapper">
+            <a class="project-link" href="#">
+              <img class="project-image" src="/img/projects/{{thumb}}" alt="{{title}}">
+            </a>
+          </div>
+        </div>
+        <div class="project-details">
+          <h2>{{title}}</h2>
+          <div class="project-links">
+            {{#links}}
+              <p><a href="{{href}}">{{title}}</a></p>
+            {{/links}}
+          </div>
+        </div>
+      </div>
+      <div class="project-desc">
+          {{description}}
+      </div>
+      <div id="tags">
+        {{#tags}}
+          <span class="tag {{short}} active">{{long}}</span>
+        {{/tags}}
+      </div>
+      {{/project}}
     </div>
-    <div class="project-desc">
-        {{project.description}}
-    </div>
-    <div id="tags">
-      {{#project.tags}}
-        <span class="tag {{short}} active">{{long}}</span>
-      {{/project.tags}}
-    </div>
+  </div>
 </div>
+{{> footer}}
+<script src="/js/shapes.js"></script>
 </body>
 </html>
