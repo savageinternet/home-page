@@ -122,14 +122,14 @@ h2 {
   font-size: 24px;
   text-align: right;
   padding: 8px;
-}
-
-#nav > a,
-#nav > span {
-  margin-right: 8px;
-}
-#nav > span {
-  color: @color-r;
+  & > ul {
+    list-style: none;
+    & > li {
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 8px;
+    }
+  }
 }
 
 #logo {
@@ -398,22 +398,13 @@ footer {
 
 /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
 @media (max-width: 639px) {
-  .si-icon-divider {
-    background-image: url(/img/divider-mobile.png);
-  }
   #projects {
     .hexagon-sizing(2);
   }
   .project-main {
-    .project-header {
-      text-align: center;
-    }
     .project {
       margin: 0 auto 64px auto;
       width: 180px;
-    }
-    .project-details {
-      text-align: center;
     }
   }
   .team-member {
@@ -425,19 +416,10 @@ footer {
   }
 }
 
-@media (min-width: 640px) and (max-width: 800px) {
-  .si-icon-divider {
-    background-image: url(/img/divider-mobile.png);
-  }
+@media (min-width: 640px) and (max-width: 799px) {
   .project-main {
-    .project-header {
-      text-align: center;
-    }
     .project {
       margin: 0 auto 96px auto;
-    }
-    .project-details {
-      text-align: center;
     }
   }
   #projects {
@@ -445,13 +427,47 @@ footer {
   }
 }
 
-@media (min-width: 800px) and (max-width: 1024px) {
-  #main {
-    width: 800px;
+@media (max-width: 799px) {
+  #nav {
+    padding: 0;
+    &:before {
+      color: @color-g;
+      content: '\2261';
+      cursor: pointer;
+      font-size: 64px;
+      line-height: 32px;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+    &:hover > ul {
+      display: block;
+    }
+    & > ul {
+      background-color: @color-bg;
+      display: none;
+      padding: 8px;
+      position: absolute;
+      right: 0;
+      & > li {
+        display: block;
+      }
+    }
   }
-  #projects {
-    .hexagon-sizing(4);
+  .si-icon-divider {
+    background-image: url(/img/divider-mobile.png);
   }
+  .project-main {
+    .project-header {
+      text-align: center;
+    }
+    .project-details {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 800px) {
   .project-main {
     .project {
       display: inline-block;
@@ -466,6 +482,15 @@ footer {
   .team-member {
     display: inline-block;
     width: 49%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1023px) {
+  #main {
+    width: 800px;
+  }
+  #projects {
+    .hexagon-sizing(4);
   }
 }
 
@@ -475,20 +500,5 @@ footer {
   }
   #projects {
     .hexagon-sizing(5);
-  }
-  .project-main {
-    .project {
-      display: inline-block;
-      vertical-align: top;
-    }
-    .project-details {
-      display: inline-block;
-      padding-left: 32px;
-      width: ~"calc(100% - 312px)";
-    }
-  }
-  .team-member {
-    display: inline-block;
-    width: 49%;
   }
 }
