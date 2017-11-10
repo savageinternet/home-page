@@ -197,7 +197,6 @@ h2 {
 .tag {
   padding: 8px;
   border-radius: 8px;
-  color: white;
   display: inline-block;
   border: 2px solid black;
   cursor: pointer;
@@ -350,6 +349,18 @@ h2 {
     margin-bottom: 32px;
     text-align: left;
   }
+  .tag {
+    padding: 8px;
+    border: none;
+    cursor: default;
+  }
+  .tag.ed.active:hover { .tag-colors-active(@color-r); }
+  .tag.el.active:hover { .tag-colors-active(@color-o); }
+  .tag.fab.active:hover { .tag-colors-active(darken(@color-y, @percent-change)); }
+  .tag.g.active:hover { .tag-colors-active(@color-g); }
+  .tag.rw.active:hover { .tag-colors-active(@color-b); }
+  .tag.sw.active:hover { .tag-colors-active(@color-v); }
+  .tag.viz.active:hover { .tag-colors-active(@color-fg); }
 }
 
 // CONSULTING
