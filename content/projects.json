@@ -1,4 +1,12 @@
 [{
+  "thumb": "affectron-300.jpg",
+  "title": "Affectron 1.0",
+  "tags": ["ed", "el", "sw", "fab"],
+  "links": [{
+    "title": "Description Video", "href": "https://youtu.be/RRbFlNV5fzg"
+    }],
+  "description": "The Affectron 1.0 Robotics kit was developed as a special birthday present: it includes a manual and box of parts and custom-fabricated components that lead the recipient through a variety of concepts in programming and robotics, culminating in a completed robot that gives hugs."
+}, {
   "thumb": "expedition-300.png",
   "title": "expedition!",
   "tags": ["ed", "g", "rw", "sw"],
